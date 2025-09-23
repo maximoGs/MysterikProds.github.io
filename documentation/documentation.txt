@@ -1,0 +1,132 @@
+Mysterik Producciones: Project Documentation
+============================================
+
+Version: 1.0
+Date: 2023-10-27
+
+### TABLE OF CONTENTS
+1. Project Overview
+2. Key Features
+3. Technology Stack
+4. File Structure Breakdown
+5. Core Concepts
+   - Component-Based Architecture
+   - Styling Philosophy
+   - Internationalization (i18n)
+   - State Management & Hooks
+6. Component Deep Dive
+   - LanguageContext & Internationalization
+   - Interactive Sections (Services, Team, Map)
+   - Modals & Lightbox System
+7. Conclusion
+
+
+1. PROJECT OVERVIEW
+--------------------
+This project is a sophisticated, single-page landing website for "Mysterik Producciones," a creative production agency based in Mendoza, Argentina. The website is designed to be an immersive "digital grimoire" that captivates potential high-value clients through a mystical and premium aesthetic. It serves as a lead generation tool, showcasing the company's manifesto, services, portfolio, team, and unique brand identity. The entire application is built with React and TypeScript and is fully internationalized to support English, Spanish, and Portuguese.
+
+
+2. KEY FEATURES
+---------------
+- **Fully Responsive Design:** Adapts seamlessly to all screen sizes, from mobile to desktop.
+- **Multi-Language Support:** Content is available in English (en), Spanish (es), and Portuguese (pt), with a user-friendly language selector.
+- **Rich Animations & Transitions:** CSS animations and scroll-triggered transitions (using Intersection Observer) create a dynamic and engaging user experience.
+- **Interactive UI Components:** Features like 3D flipping service cards, a 3D carousel for the team section, and an interactive "Arcane Map".
+- **Image Lightbox:** A full-screen, keyboard-navigable image gallery viewer for an immersive portfolio experience.
+- **Component-Based Architecture:** Built with reusable React components for maintainability and scalability.
+- **Aesthetic Cohesion:** A strong, consistent visual theme of mysticism, alchemy, and luxury is maintained throughout the site.
+
+
+3. TECHNOLOGY STACK
+-------------------
+- **Frontend Framework:** React 18
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS (via CDN) with custom in-line styles and CSS keyframes for animations.
+- **Icons:** React Icons (`react-icons/fa`, `react-icons/fi`)
+- **Linting/Formatting:** (Assumed) ESLint, Prettier
+- **Build Tool:** The project is structured to be compatible with modern bundlers like Vite or Create React App.
+
+
+4. FILE STRUCTURE BREAKDOWN
+---------------------------
+
+`./`
+  - `index.html`: The main HTML entry point. It loads Tailwind CSS, custom fonts from Google Fonts, React/ReactDOM from a CDN, and the main application script (`index.tsx`). It also contains the `<div id="root">` where the React app is mounted and some global CSS styles.
+  - `index.tsx`: The application's entry script. It finds the 'root' element and renders the main `<App />` component, wrapping it in the `LanguageProvider` to enable multi-language support across the entire app.
+  - `metadata.json`: Contains metadata for the project, such as its name and description.
+  - `vite.svg`: The favicon for the website, displayed in the browser tab.
+  - `types.ts`: Centralized TypeScript type definitions (interfaces) for data structures used throughout the application (e.g., `Service`, `TeamMember`, `GalleryImage`).
+  - `constants.tsx`: A file that stores and exports static data arrays used to populate the UI, such as `SERVICES`, `TEAM_MEMBERS`, `GALLERY_IMAGES`, etc. This separates data from presentation logic.
+
+`./components/`
+  - `App.tsx`: The root component that assembles all the different sections of the landing page in the correct order.
+  - `Header.tsx`: The website's navigation bar. It is responsive, featuring a desktop menu and a collapsible mobile menu. It is "sticky" and changes appearance on scroll.
+  - `ParticleBackground.tsx`: A purely decorative component that generates an animated background of floating golden particles, used in the Hero section.
+  - `HeroSection.tsx`: The main landing view ("above the fold") with the main heading, subheading, and primary call-to-action.
+  - `ManifestoSection.tsx`: A section detailing the company's philosophy and core pillars.
+  - `ServicesSection.tsx`: Displays the company's services using interactive 3D flipping cards.
+  - `PortfolioSection.tsx`: Showcases video projects by embedding YouTube players.
+  - `AlchemicalGallerySection.tsx`: A masonry-style image gallery. It handles the state for and renders the `Lightbox` component when an image is clicked.
+  - `ArcaneMapSection.tsx`: An interactive map component with clickable points of interest that reveal informational cards.
+  - `TeamSection.tsx`: A complex component featuring a 3D carousel to display team members. Clicking a member opens a `Modal` with detailed information.
+  - `NewsSection.tsx`: A section for blog posts or company news.
+  - `ContactSection.tsx`: A simple, elegant contact form.
+  - `Footer.tsx`: The standard website footer with copyright information.
+  - `FloatingWhatsApp.tsx`: A "sticky" button in the bottom-right corner that links to WhatsApp for quick contact.
+  - `Modal.tsx`: A generic, reusable modal component built with a React Portal. It is used for the team member details view and is accessible (keyboard navigation for closing).
+  - `Lightbox.tsx`: A specialized modal for displaying images in a full-screen view. It includes navigation controls (next/previous) and supports keyboard navigation.
+  - `LanguageSelector.tsx`: A dropdown component allowing users to switch the application's language.
+
+`./contexts/`
+  - `LanguageContext.tsx`: A React Context provider that manages the application's current language and loads the corresponding translation JSON file. It makes the language state and translation data available to all child components via the `useLanguage` hook.
+
+`./hooks/`
+  - `useIntersectionObserver.ts`: A custom React hook that abstracts the `IntersectionObserver` API. It's used to detect when a component scrolls into view, which triggers "fade-in" and "slide-up" animations for a polished feel.
+  - `useTranslations.ts`: A custom hook that simplifies accessing translated strings. It consumes the `LanguageContext` and provides a `t()` function that takes a key (e.g., 'hero.title') and returns the correct string for the currently selected language.
+
+`./translations/`
+  - `en.json`: Contains all English translation strings, organized in a nested JSON object.
+  - `es.json`: Contains all Spanish translation strings.
+  - `pt.json`: Contains all Portuguese translation strings.
+
+
+5. CORE CONCEPTS
+----------------
+
+### Component-Based Architecture
+The application is broken down into small, reusable components. Each section of the page (`HeroSection`, `ServicesSection`, etc.) is its own component, promoting separation of concerns and making the codebase easier to manage and debug.
+
+### Styling Philosophy
+Styling is handled exclusively through **Tailwind CSS**, loaded via a CDN. This utility-first approach allows for rapid and consistent styling directly within the JSX. For more complex animations (`float`, `fade-in`) or styles that are difficult with utilities (`transform-style`), custom CSS classes and `@keyframes` are defined in the `<style>` block of `index.html`. The color palette and fonts are configured in the `tailwind.config` object.
+
+### Internationalization (i18n)
+The i18n system is powered by `LanguageContext`.
+1.  `LanguageProvider` wraps the entire app. It detects the user's browser language on initial load and fetches the corresponding `.json` translation file from the `/translations` directory.
+2.  The `LanguageSelector` component allows the user to manually change the language, which updates the state in the `LanguageProvider`.
+3.  The `useTranslations` hook provides a simple `t(key)` function that components use to retrieve the correct string for the given key from the loaded translation file. This makes swapping out text for different languages trivial.
+
+### State Management & Hooks
+- **useState:** Used for local component state (e.g., modal visibility, carousel index).
+- **useEffect:** Used for side effects, such as adding and removing event listeners (scroll, keyboard events) or fetching data (translations).
+- **useRef:** Used to get direct references to DOM elements, primarily for the `useIntersectionObserver` hook.
+- **useContext:** Used via custom hooks (`useLanguage`) to consume shared state from React Context providers.
+
+
+6. COMPONENT DEEP DIVE
+---------------------
+
+### LanguageContext & Internationalization
+This is the heart of the multi-language functionality. Instead of hardcoding text, components use `const { t } = useTranslations();` and then render text like `<p>{t('hero.subtitle')}</p>`. When the language changes, the context updates, providing a new `translations` object, and all components automatically re-render with the new text. It also includes a fallback mechanism to English if a translation file fails to load.
+
+### Interactive Sections
+- **ServicesSection:** Each service card is a component with two faces (front and back). The component uses a `[transform-style:preserve-3d]` and conditionally applies a `[transform:rotateY(180deg)]` class based on its `isFlipped` state to create the 3D flip effect on hover or click.
+- **TeamSection:** This uses CSS transforms to create a 3D carousel. The position, scale, rotation, and z-index of each member card are calculated dynamically based on its offset from the `currentIndex`.
+- **ArcaneMapSection:** This component uses absolute positioning with percentage-based coordinates to place interactive points on a background map SVG. Clicking a point sets the `activePoint` state, which conditionally renders an information card next to it.
+
+### Modals & Lightbox System
+Both `Modal.tsx` and `Lightbox.tsx` use `ReactDOM.createPortal`. This renders their content into a new DOM node directly under `document.body`, which is crucial for correctly handling z-index, positioning, and stacking context, ensuring they always appear on top of all other content. They also listen for the 'Escape' key to provide an accessible closing mechanism.
+
+
+7. CONCLUSION
+-------------
+The Mysterik Producciones website is a robust, modern, and highly polished React application. It effectively combines a strong, unique aesthetic with advanced frontend features to create an impressive digital showcase. Its modular architecture, reusable hooks, and powerful internationalization system make it both scalable and maintainable.

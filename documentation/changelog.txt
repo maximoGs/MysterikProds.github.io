@@ -1,0 +1,15 @@
+Project Changelog
+=================
+
+This file documents all significant updates, feature additions, and bug fixes for the Mysterik Producciones website project. Each entry should include the date and a brief description of the changes.
+
+---
+
+### 2023-10-27
+- **Project Documentation:** Created the initial `documentation.txt` file.
+- **Documentation Folder:** Organized all documentation into a dedicated `/documentation` directory and added this `changelog.txt` file.
+- **Enhanced Particle Aesthetics:** Revamped the hero section's particle background for a more dynamic and detailed mystical effect. This includes:
+  - Increasing particle count.
+  - Introducing two distinct particle types: slower, glowing "orbs" and faster, twinkling "stardust".
+  - Implementing more complex, non-linear animation paths with horizontal swaying for orbs.
+  - Adding a subtle glow effect to orbs and unique streak shapes for stardust.

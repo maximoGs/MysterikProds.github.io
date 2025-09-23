@@ -1,0 +1,156 @@
+
+{
+  "header": {
+    "manifesto": "Manifesto",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "gallery": "Gallery",
+    "map": "Map",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Mysterik Producciones",
+    "subtitle": "Channeling Mendoza's Essence. Forging Global Legacies.",
+    "cta": "Begin Your Consultation"
+  },
+  "manifesto": {
+    "title": "Our Conjuring: A Legacy in the Making",
+    "description": "Born from a deep, intrinsic bond with our land, Mendoza, Mysterik channels its energy to build global value. Our vision is to establish a world-class nexus for creativity and production, rooted in Argentina, for the world. We don't just create ads; we build mythologies with a deep, authentic connection to a place of world-renowned quality. We are strategic partners in constructing your legacy.",
+    "pillar1": {
+      "title": "Gastronomic & Viticultural Hub",
+      "description": "We craft sensory-rich visual stories for wineries and world-renowned chefs, translating the taste of Mendoza into a global visual language."
+    },
+    "pillar2": {
+      "title": "Premier Tourism Nexus",
+      "description": "We produce immersive, breathtaking content that showcases Mendoza's landscapes, from the Andes peaks to vineyard valleys, driving high-value tourism."
+    },
+    "pillar3": {
+      "title": "Audiovisual Powerhouse",
+      "description": "We are developing the infrastructure and talent to position Mendoza as a prime location for international film and advertising productions."
+    },
+    "pillar4": {
+      "title": "Productive & Industrial Engine",
+      "description": "We partner with local industries, creating powerful corporate narratives that drive investment and showcase Mendoza's economic potential."
+    }
+  },
+  "services": {
+    "title": "The Creative Oracle",
+    "description": "Our services are the arcana through which we channel our creative power. Discover the ritual that will elevate your brand.",
+    "cards": {
+      "mythology": {
+        "title": "Brand Mythology",
+        "description": "We craft compelling brand narratives that resonate deeply, transforming your business into a cultural touchstone. Our strategic storytelling builds a loyal following and a timeless legacy."
+      },
+      "alchemy": {
+        "title": "Visual Alchemy",
+        "description": "Our design and audiovisual production transmutes ideas into stunning visual experiences. From cinematic commercials to captivating digital content, we create art that commands attention."
+      },
+      "seership": {
+        "title": "Digital Seership",
+        "description": "We navigate the complexities of the digital cosmos, charting a course for maximum impact. Our data-driven strategies ensure your message reaches and engages your ideal audience."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Spells Cast in Light",
+    "description": "Witness the tangible results of our alchemy. Each project is a testament to our power to shape perception and inspire action.",
+    "items": {
+      "cosmicElixir": {
+        "title": "Cosmic Elixir",
+        "description": "A beverage that promises a taste of the stars."
+      },
+      "chronoWatches": {
+        "title": "Chrono Watches",
+        "description": "Timepieces that are both an instrument and an heirloom."
+      },
+      "nocturneVehicles": {
+        "title": "Nocturne Vehicles",
+        "description": "Experience the art of motion in the dead of night."
+      }
+    }
+  },
+  "gallery": {
+    "title": "The Alchemical Gallery",
+    "description": "A curated visual journey into the soul of our creative process and the land that inspires it. This is not a simple collection of images; it is a testament to our vision."
+  },
+  "map": {
+    "title": "The Arcane Map",
+    "description": "A mystical and interactive cartography of our impact, our inspirations, and our ecosystem. This map visually demonstrates our deep connection to the territory and our global reach."
+  },
+  "team": {
+    "title": "The Circle of Arcana",
+    "description": "Meet the artisans who conduct our creative rituals. A living deck of professionals, each a master of their craft.",
+    "cta": "Reveal Personal Grimoire",
+    "prevAria": "Previous team member",
+    "nextAria": "Next team member",
+    "members": {
+      "elara": {
+        "role": "The High Priestess",
+        "title": "CEO & Visionary",
+        "bio": "Elara channels the creative vision of Mysterik, guiding the coven with intuition and strategic insight. Her connection to market undercurrents is the source of our power.",
+        "keywords": "Brand Alchemy, Strategic Vision, Market Intuition, Leadership"
+      },
+      "jax": {
+        "role": "The Magician",
+        "title": "Creative Director",
+        "bio": "Jax manifests ideas into reality. A master of visual and narrative arts, he wields the tools of creation to cast potent spells of engagement and desire.",
+        "keywords": "Film Direction, Visual Storytelling, Creative Concepting, UX Magic"
+      },
+      "orion": {
+        "role": "The Emperor",
+        "title": "Strategy & Operations",
+        "bio": "Orion builds the foundations upon which our rituals are performed. His mastery of structure and process ensures that our creative energy is focused and effective.",
+        "keywords": "Operations, Strategic Planning, Project Management, Data Analysis"
+      },
+      "lyra": {
+        "role": "The Star",
+        "title": "Lead Designer",
+        "bio": "Lyra illuminates our projects with breathtaking design. Her work is a constellation of beauty and function, guiding users through unforgettable digital experiences.",
+        "keywords": "UI/UX Design, Graphic Design, Illustration, Motion Graphics"
+      }
+    }
+  },
+  "news": {
+    "title": "The Grimoire",
+    "description": "Entries from our book of secrets. Insights, philosophies, and chronicles from the world of Mysterik.",
+    "cta": "Read Entry",
+    "posts": {
+      "alchemy": {
+        "title": "The Alchemy of Virality",
+        "excerpt": "Decoding the hidden patterns behind content that captures the world's attention."
+      },
+      "artDeco": {
+        "title": "Art Deco in the Digital Age",
+        "excerpt": "How timeless aesthetics are being reborn in modern web experiences."
+      },
+      "legacy": {
+        "title": "Beyond the Campaign: Building a Brand Legacy",
+        "excerpt": "Our philosophy on creating marketing that transcends the immediate and builds lasting value."
+      }
+    }
+  },
+  "contact": {
+    "title": "Join Our Inner Circle",
+    "description": "Begin the ritual. Contact us to gain access to exclusive insights and to discuss how our alchemy can forge your legacy.",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "cta": "Send Invocation"
+  },
+  "footer": {
+    "rights": "All Rites Reserved.",
+    "tagline": "From Mendoza to the World."
+  },
+  "whatsapp": {
+    "ariaLabel": "Contact us on WhatsApp"
+  },
+  "modal": {
+    "closeAria": "Close modal"
+  },
+  "lightbox": {
+    "closeAria": "Close viewer",
+    "prevAria": "Previous image",
+    "nextAria": "Next image"
+  }
+}
