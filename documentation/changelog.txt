@@ -5,6 +5,10 @@ This file documents all significant updates, feature additions, and bug fixes fo
 
 ---
 
+### 2023-10-30
+- **Critical Deployment Fix:** Resolved a runtime error, `Uncaught SyntaxError: Cannot use import statement outside a module`, which was preventing the application from loading correctly.
+- **Removed Conflicting Import Map:** The `<script type="importmap">` was removed from `index.html`. This system was conflicting with the in-browser Babel transpiler, which is responsible for handling `import` statements. The application now correctly relies on the global React/ReactDOM objects provided by the CDN scripts, ensuring compatibility with static hosting environments.
+
 ### 2023-10-29
 - **Critical Deployment Fix:** Resolved a breaking error, `Cannot use import statement outside a module`, that prevented the application from running on static hosting platforms.
 - **Removed Conflicting Module Systems:** The `importmap` script was removed from `index.html` to eliminate a conflict with the Babel Standalone transpiler.
