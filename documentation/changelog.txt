@@ -5,6 +5,10 @@ This file documents all significant updates, feature additions, and bug fixes fo
 
 ---
 
+### 2023-10-28
+- **Deployment Fix:** Addressed a critical MIME type error (`application/octet-stream`) that occurred when deploying to static hosting services like GitHub Pages.
+- **Babel Standalone Integration:** Added the Babel Standalone library to `index.html` to enable live, in-browser transpilation of `.tsx` and `.ts` files. This converts TypeScript and JSX into browser-compatible JavaScript on the fly, bypassing server-side MIME type misconfigurations and ensuring the application runs correctly.
+
 ### 2023-10-27
 - **Project Documentation:** Created the initial `documentation.txt` file.
 - **Documentation Folder:** Organized all documentation into a dedicated `/documentation` directory and added this `changelog.txt` file.
