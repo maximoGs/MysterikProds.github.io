@@ -1,10 +1,10 @@
-
 import React, { useState, useRef } from 'react';
 import { MAP_POINTS } from '../constants';
 import type { MapPoint } from '../types';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import useTranslations from '../hooks/useTranslations';
-import { FiX } from 'react-icons/fi';
+
+const XIcon = () => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>;
 
 const MapBackground: React.FC = () => (
     <svg className="w-full h-full" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
@@ -81,7 +81,7 @@ const ArcaneMapSection: React.FC = () => {
                             style={{ top: activePoint.coords.top, left: activePoint.coords.left, transform: 'translate(20px, -50%)' }}
                         >
                             <button onClick={handleCloseCard} className="absolute top-2 right-2 text-brand-parchment/50 hover:text-brand-gold">
-                                <FiX />
+                                <XIcon />
                             </button>
                             <img src={activePoint.imageUrl} alt={activePoint.title} className="w-full h-24 object-cover rounded-md mb-3" />
                             <h4 className="font-serif text-brand-gold text-lg">{activePoint.title}</h4>

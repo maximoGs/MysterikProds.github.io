@@ -1,9 +1,12 @@
-
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 import type { GalleryImage } from '../types';
 import useTranslations from '../hooks/useTranslations';
+
+// Fix: Update icon components to accept a `size` prop for custom dimensions.
+const ChevronLeftIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"></polyline></svg>;
+const ChevronRightIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>;
+const XIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>;
 
 interface LightboxProps {
     images: GalleryImage[];
@@ -67,7 +70,7 @@ const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, setC
                 onClick={onClose}
                 aria-label={t('lightbox.closeAria')}
             >
-                <FiX size={32} />
+                <XIcon size={32} />
             </button>
             
             <button
@@ -75,7 +78,7 @@ const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, setC
                 onClick={goToPrevious}
                 aria-label={t('lightbox.prevAria')}
             >
-                <FiChevronLeft size={40} />
+                <ChevronLeftIcon size={40} />
             </button>
             
             <button
@@ -83,7 +86,7 @@ const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, setC
                 onClick={goToNext}
                 aria-label={t('lightbox.nextAria')}
             >
-                <FiChevronRight size={40} />
+                <ChevronRightIcon size={40} />
             </button>
 
             <div className="relative w-full h-full flex flex-col items-center justify-center p-16" onClick={e => e.stopPropagation()}>

@@ -5,6 +5,11 @@ This file documents all significant updates, feature additions, and bug fixes fo
 
 ---
 
+### 2023-10-29
+- **Critical Deployment Fix:** Resolved a breaking error, `Cannot use import statement outside a module`, that prevented the application from running on static hosting platforms.
+- **Removed Conflicting Module Systems:** The `importmap` script was removed from `index.html` to eliminate a conflict with the Babel Standalone transpiler.
+- **Inlined Icon Dependencies:** The `react-icons` library dependency was removed entirely. All icons have been converted to inline SVG components, making the application fully self-contained and removing the need for a complex module loader. This change simplifies the architecture and ensures robust deployability.
+
 ### 2023-10-28
 - **Deployment Fix:** Addressed a critical MIME type error (`application/octet-stream`) that occurred when deploying to static hosting services like GitHub Pages.
 - **Babel Standalone Integration:** Added the Babel Standalone library to `index.html` to enable live, in-browser transpilation of `.tsx` and `.ts` files. This converts TypeScript and JSX into browser-compatible JavaScript on the fly, bypassing server-side MIME type misconfigurations and ensuring the application runs correctly.
