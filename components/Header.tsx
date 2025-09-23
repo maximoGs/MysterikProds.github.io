@@ -30,7 +30,6 @@ const Header: React.FC = () => {
         { key: 'services', href: '#services' },
         { key: 'portfolio', href: '#portfolio' },
         { key: 'gallery', href: '#gallery' },
-        { key: 'map', href: '#map' },
         { key: 'team', href: '#team' },
         { key: 'contact', href: '#contact' },
     ];

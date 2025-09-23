@@ -6,7 +6,6 @@ import ManifestoSection from './components/ManifestoSection';
 import ServicesSection from './components/ServicesSection';
 import PortfolioSection from './components/PortfolioSection';
 import AlchemicalGallerySection from './components/AlchemicalGallerySection';
-import ArcaneMapSection from './components/ArcaneMapSection';
 import TeamSection from './components/TeamSection';
 import NewsSection from './components/NewsSection';
 import ContactSection from './components/ContactSection';
@@ -23,7 +22,6 @@ const App: React.FC = () => {
         <ServicesSection />
         <PortfolioSection />
         <AlchemicalGallerySection />
-        <ArcaneMapSection />
         <TeamSection />
         <NewsSection />
         <ContactSection />

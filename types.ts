@@ -1,4 +1,3 @@
-
 // Fix: Add a type-only import for React to resolve namespace error.
 import type * as React from 'react';
 
@@ -43,11 +42,15 @@ export interface GalleryImage {
   description: string;
 }
 
+// Fix: Define and export the 'MapPoint' interface.
 export interface MapPoint {
   id: number;
-  type: 'production' | 'inspiration' | 'partnership';
   title: string;
   description: string;
+  coords: {
+    top: string;
+    left: string;
+  };
+  type: 'production' | 'inspiration' | 'partnership';
   imageUrl: string;
-  coords: { top: string; left: string };
 }

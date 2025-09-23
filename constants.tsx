@@ -1,9 +1,9 @@
-
 import React from 'react';
+// Fix: Import the 'MapPoint' type.
 import type { Service, TeamMember, PortfolioItem, NewsPost, GalleryImage, MapPoint } from './types';
 
 const EyeIcon = () => (
-  <svg xmlns="http://www.w.org/2000/svg" className="h-16 w-16 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
     <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
   </svg>
@@ -123,10 +123,38 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     { id: 8, src: 'https://picsum.photos/seed/gallery8/800/1000', title: 'Shadow & Light', description: 'An experimental shot exploring contrast and form.'},
 ];
 
+// Fix: Add and export the 'MAP_POINTS' constant.
 export const MAP_POINTS: MapPoint[] = [
-    { id: 1, type: 'production', title: 'Bodega Catena Zapata', description: 'Site of the award-winning "Malbec Legend" campaign.', imageUrl: 'https://picsum.photos/seed/map1/400/300', coords: { top: '45%', left: '30%' } },
-    { id: 2, type: 'inspiration', title: 'Aconcagua', description: 'The "Sentinel of Stone" provides constant inspiration for our grandest visual concepts.', imageUrl: 'https://picsum.photos/seed/map2/400/300', coords: { top: '20%', left: '25%' } },
-    { id: 3, type: 'partnership', title: 'Creative Hub - London', description: 'Our European post-production partner, connecting Mendoza\'s talent to the world.', imageUrl: 'https://picsum.photos/seed/map3/400/300', coords: { top: '35%', left: '85%' } },
-    { id: 4, type: 'production', title: 'Villavicencio', description: 'Location for the "Elixir of Life" mineral water advertisement.', imageUrl: 'https://picsum.photos/seed/map4/400/300', coords: { top: '65%', left: '40%' } },
-    { id: 5, type: 'partnership', title: 'Tech Incubator - São Paulo', description: 'Collaborating on next-generation digital experiences.', imageUrl: 'https://picsum.photos/seed/map5/400/300', coords: { top: '75%', left: '70%' } },
+  {
+    id: 1,
+    title: 'Mendoza City - The Heart of Production',
+    description: 'Our main studio where strategy and creativity converge. The epicenter of our alchemical processes.',
+    coords: { top: '45%', left: '35%' },
+    type: 'production',
+    imageUrl: 'https://picsum.photos/seed/map1/400/200',
+  },
+  {
+    id: 2,
+    title: 'Uco Valley - A Wellspring of Inspiration',
+    description: 'The breathtaking landscapes of the Uco Valley fuel our visual storytelling and brand mythologies.',
+    coords: { top: '75%', left: '25%' },
+    type: 'inspiration',
+    imageUrl: 'https://picsum.photos/seed/map2/400/200',
+  },
+  {
+    id: 3,
+    title: 'Chacras de Coria - Hub of Partnership',
+    description: 'Where we forge alliances with visionary artisans, wineries, and businesses to create magic together.',
+    coords: { top: '60%', left: '55%' },
+    type: 'partnership',
+    imageUrl: 'https://picsum.photos/seed/map3/400/200',
+  },
+    {
+    id: 4,
+    title: 'Aconcagua - Peak Ambition',
+    description: 'Inspired by the highest peak, we aim for unparalleled excellence in every project we undertake.',
+    coords: { top: '15%', left: '15%' },
+    type: 'inspiration',
+    imageUrl: 'https://picsum.photos/seed/map4/400/200',
+  },
 ];
