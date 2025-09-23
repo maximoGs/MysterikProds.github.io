@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react';
-import type * as React from 'react';
+
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
+
+const { useState, useEffect } = React;
 
 interface ObserverOptions {
     root?: Element | null;

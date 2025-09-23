@@ -1,4 +1,8 @@
-import React, { useMemo } from 'react';
+
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
+
+const { useMemo } = React;
 
 const ParticleBackground: React.FC = () => {
   const particles = useMemo(() => {

@@ -1,5 +1,4 @@
 
-import React from 'react';
 import useTranslations from '../hooks/useTranslations';
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className }) => (

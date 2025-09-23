@@ -1,9 +1,12 @@
 
-import React, { useState, useRef } from 'react';
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
 import { SERVICES } from '../constants';
 import type { Service } from '../types';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import useTranslations from '../hooks/useTranslations';
+
+const { useState, useRef } = React;
 
 interface ServiceCardProps {
   service: Service;

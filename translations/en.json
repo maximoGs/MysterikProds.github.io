@@ -5,7 +5,6 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "gallery": "Gallery",
-    "map": "Map",
     "team": "Team",
     "contact": "Contact"
   },
@@ -73,10 +72,6 @@
   "gallery": {
     "title": "The Alchemical Gallery",
     "description": "A curated visual journey into the soul of our creative process and the land that inspires it. This is not a simple collection of images; it is a testament to our vision."
-  },
-  "map": {
-    "title": "The Arcane Map",
-    "description": "A mystical and interactive cartography of our impact, our inspirations, and our ecosystem. This map visually demonstrates our deep connection to the territory and our global reach."
   },
   "team": {
     "title": "The Circle of Arcana",

@@ -1,7 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
 import useTranslations from '../hooks/useTranslations';
 import LanguageSelector from './LanguageSelector';
+
+const { useState, useEffect } = React;
 
 const MysticalSymbol: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

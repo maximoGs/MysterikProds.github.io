@@ -1,5 +1,3 @@
-// Fix: Add a type-only import for React to resolve namespace error.
-import type * as React from 'react';
 
 export interface Service {
   title: string;
@@ -42,15 +40,15 @@ export interface GalleryImage {
   description: string;
 }
 
-// Fix: Define and export the 'MapPoint' interface.
+// Fix: Add MapPoint interface to define the shape of map location data for the ArcaneMapSection component.
 export interface MapPoint {
   id: number;
   title: string;
   description: string;
+  imageUrl: string;
+  type: 'production' | 'inspiration' | 'partnership';
   coords: {
     top: string;
     left: string;
   };
-  type: 'production' | 'inspiration' | 'partnership';
-  imageUrl: string;
 }

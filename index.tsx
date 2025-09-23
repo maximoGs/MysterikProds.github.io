@@ -1,4 +1,5 @@
 
+// Fix: Import React and ReactDOM to resolve UMD global errors.
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';

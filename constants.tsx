@@ -1,5 +1,5 @@
-import React from 'react';
-// Fix: Import the 'MapPoint' type.
+
+// Fix: Import the newly created MapPoint type to be used with the MAP_POINTS constant.
 import type { Service, TeamMember, PortfolioItem, NewsPost, GalleryImage, MapPoint } from './types';
 
 const EyeIcon = () => (
@@ -123,38 +123,38 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     { id: 8, src: 'https://picsum.photos/seed/gallery8/800/1000', title: 'Shadow & Light', description: 'An experimental shot exploring contrast and form.'},
 ];
 
-// Fix: Add and export the 'MAP_POINTS' constant.
+// Fix: Add MAP_POINTS constant to provide data for the ArcaneMapSection component.
 export const MAP_POINTS: MapPoint[] = [
   {
     id: 1,
-    title: 'Mendoza City - The Heart of Production',
-    description: 'Our main studio where strategy and creativity converge. The epicenter of our alchemical processes.',
-    coords: { top: '45%', left: '35%' },
-    type: 'production',
+    title: 'Mendoza City Production Hub',
+    description: 'Our central command for audiovisual production, where cinematic magic is born.',
     imageUrl: 'https://picsum.photos/seed/map1/400/200',
+    type: 'production',
+    coords: { top: '35%', left: '30%' },
   },
   {
     id: 2,
-    title: 'Uco Valley - A Wellspring of Inspiration',
-    description: 'The breathtaking landscapes of the Uco Valley fuel our visual storytelling and brand mythologies.',
-    coords: { top: '75%', left: '25%' },
-    type: 'inspiration',
+    title: 'Uco Valley Vineyards',
+    description: 'A source of endless inspiration, where we capture the soul of wine country.',
     imageUrl: 'https://picsum.photos/seed/map2/400/200',
+    type: 'inspiration',
+    coords: { top: '65%', left: '45%' },
   },
   {
     id: 3,
-    title: 'Chacras de Coria - Hub of Partnership',
-    description: 'Where we forge alliances with visionary artisans, wineries, and businesses to create magic together.',
-    coords: { top: '60%', left: '55%' },
-    type: 'partnership',
+    title: 'Buenos Aires Partnership Office',
+    description: 'Connecting with global brands and fostering creative collaborations from the capital.',
     imageUrl: 'https://picsum.photos/seed/map3/400/200',
+    type: 'partnership',
+    coords: { top: '25%', left: '75%' },
   },
-    {
+  {
     id: 4,
-    title: 'Aconcagua - Peak Ambition',
-    description: 'Inspired by the highest peak, we aim for unparalleled excellence in every project we undertake.',
-    coords: { top: '15%', left: '15%' },
-    type: 'inspiration',
+    title: 'Patagonia Film Unit',
+    description: 'Our remote unit for capturing the raw, untamed beauty of the southern landscapes.',
     imageUrl: 'https://picsum.photos/seed/map4/400/200',
+    type: 'production',
+    coords: { top: '80%', left: '20%' },
   },
 ];

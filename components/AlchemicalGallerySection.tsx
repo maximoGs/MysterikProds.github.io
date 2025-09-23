@@ -1,9 +1,12 @@
 
-import React, { useState, useRef } from 'react';
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
 import { GALLERY_IMAGES } from '../constants';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import useTranslations from '../hooks/useTranslations';
 import Lightbox from './Lightbox';
+
+const { useState, useRef } = React;
 
 const AlchemicalGallerySection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);

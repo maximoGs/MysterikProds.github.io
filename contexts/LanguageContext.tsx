@@ -1,4 +1,8 @@
-import React, { createContext, useState, useContext, useEffect, useMemo } from 'react';
+
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
+
+const { createContext, useState, useContext, useEffect, useMemo } = React;
 
 type Language = 'en' | 'es' | 'pt';
 

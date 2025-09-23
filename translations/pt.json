@@ -5,7 +5,6 @@
     "services": "Serviços",
     "portfolio": "Portfólio",
     "gallery": "Galeria",
-    "map": "Mapa",
     "team": "Equipe",
     "contact": "Contato"
   },
@@ -73,10 +72,6 @@
   "gallery": {
     "title": "A Galeria Alquímica",
     "description": "Uma jornada visual curada na alma do nosso processo criativo e da terra que o inspira. Esta não é uma simples coleção de imagens; é um testemunho da nossa visão."
-  },
-  "map": {
-    "title": "O Mapa Arcano",
-    "description": "Uma cartografia mística e interativa do nosso impacto, nossas inspirações e nosso ecossistema. Este mapa demonstra visualmente nossa profunda conexão com o território e nosso alcance global."
   },
   "team": {
     "title": "O Círculo dos Arcanos",

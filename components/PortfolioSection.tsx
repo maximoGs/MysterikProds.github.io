@@ -1,8 +1,11 @@
 
-import React, { useRef } from 'react';
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
 import { PORTFOLIO_ITEMS } from '../constants';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import useTranslations from '../hooks/useTranslations';
+
+const { useRef } = React;
 
 const PortfolioSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);

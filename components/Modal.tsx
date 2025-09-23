@@ -1,7 +1,10 @@
 
-import React, { useEffect } from 'react';
+// Fix: Import React and ReactDOM to resolve UMD global errors.
+import React from 'react';
 import ReactDOM from 'react-dom';
 import useTranslations from '../hooks/useTranslations';
+
+const { useEffect } = React;
 
 interface ModalProps {
     isOpen: boolean;

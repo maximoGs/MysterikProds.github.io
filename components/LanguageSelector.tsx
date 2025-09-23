@@ -1,6 +1,9 @@
 
-import React, { useState, useRef, useEffect } from 'react';
+// Fix: Import React to resolve UMD global error.
+import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+
+const { useState, useRef, useEffect } = React;
 
 const languages = [
   { code: 'en', label: 'EN' },

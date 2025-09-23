@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+
+// Fix: Import React and ReactDOM to resolve UMD global errors.
+import React from 'react';
 import ReactDOM from 'react-dom';
 import type { GalleryImage } from '../types';
 import useTranslations from '../hooks/useTranslations';
+
+const { useEffect } = React;
 
 // Fix: Update icon components to accept a `size` prop for custom dimensions.
 const ChevronLeftIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"></polyline></svg>;
