@@ -1,9 +1,7 @@
-
-// Fix: Import React to resolve UMD global error.
-import React from 'react';
+// Fix: Replace UMD-style destructuring with a proper module import.
+import React, { useState, useRef, useEffect } from 'react';
+// Fix: Import the useLanguage hook to resolve "Cannot find name" error.
 import { useLanguage } from '../contexts/LanguageContext';
-
-const { useState, useRef, useEffect } = React;
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -13,7 +11,8 @@ const languages = [
 
 type LanguageCode = typeof languages[number]['code'];
 
-const LanguageSelector: React.FC = () => {
+// Fix: Export the component.
+export const LanguageSelector: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -63,5 +62,3 @@ const LanguageSelector: React.FC = () => {
     </div>
   );
 };
-
-export default LanguageSelector;

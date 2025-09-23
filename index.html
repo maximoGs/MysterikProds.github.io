@@ -87,6 +87,36 @@
 </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Load all scripts in dependency order -->
+    <!-- Types, Hooks, Contexts, Constants -->
+    <script type="text/babel" data-presets="react,typescript" src="./types.ts"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./hooks/useIntersectionObserver.ts"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./contexts/LanguageContext.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./hooks/useTranslations.ts"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./constants.tsx"></script>
+
+    <!-- Components -->
+    <script type="text/babel" data-presets="react,typescript" src="./components/ParticleBackground.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/Modal.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/Lightbox.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/LanguageSelector.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/Header.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/HeroSection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/ManifestoSection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/ServicesSection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/PortfolioSection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/TeamSection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/NewsSection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/ContactSection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/AlchemicalGallerySection.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/Footer.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="./components/FloatingWhatsApp.tsx"></script>
+    
+    <!-- App Root -->
+    <script type="text/babel" data-presets="react,typescript" src="./App.tsx"></script>
+
+    <!-- Main entry point -->
     <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>

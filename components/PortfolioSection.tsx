@@ -1,13 +1,12 @@
-
-// Fix: Import React to resolve UMD global error.
-import React from 'react';
+// Fix: Replace UMD-style destructuring with a proper module import.
+import React, { useRef } from 'react';
+// Fix: Import constants and hooks to resolve undefined variables.
 import { PORTFOLIO_ITEMS } from '../constants';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import useTranslations from '../hooks/useTranslations';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useTranslations } from '../hooks/useTranslations';
 
-const { useRef } = React;
-
-const PortfolioSection: React.FC = () => {
+// Fix: Export the component.
+export const PortfolioSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
     const { t } = useTranslations();
@@ -54,5 +53,3 @@ const PortfolioSection: React.FC = () => {
         </section>
     );
 };
-
-export default PortfolioSection;

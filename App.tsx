@@ -1,17 +1,19 @@
+// Fix: Add imports for React and all child components.
+import React from 'react';
+import { AlchemicalGallerySection } from './components/AlchemicalGallerySection';
+import { ContactSection } from './components/ContactSection';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { HeroSection } from './components/HeroSection';
+import { ManifestoSection } from './components/ManifestoSection';
+import { NewsSection } from './components/NewsSection';
+import { PortfolioSection } from './components/PortfolioSection';
+import { ServicesSection } from './components/ServicesSection';
+import { TeamSection } from './components/TeamSection';
 
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import ManifestoSection from './components/ManifestoSection';
-import ServicesSection from './components/ServicesSection';
-import PortfolioSection from './components/PortfolioSection';
-import AlchemicalGallerySection from './components/AlchemicalGallerySection';
-import TeamSection from './components/TeamSection';
-import NewsSection from './components/NewsSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
-
-const App: React.FC = () => {
+// Fix: Export the App component.
+export const App = () => {
   return (
     <div className="bg-brand-dark min-h-screen overflow-x-hidden">
       <Header />
@@ -30,5 +32,3 @@ const App: React.FC = () => {
     </div>
   );
 };
-
-export default App;

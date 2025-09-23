@@ -1,12 +1,10 @@
-
-// Fix: Import React to resolve UMD global error.
-import React from 'react';
+// Fix: Replace UMD-style destructuring with a proper module import.
+import React, { useState, useRef } from 'react';
+// Fix: Import types, constants, and hooks to resolve undefined variables.
+import { Service } from '../types';
 import { SERVICES } from '../constants';
-import type { Service } from '../types';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import useTranslations from '../hooks/useTranslations';
-
-const { useState, useRef } = React;
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useTranslations } from '../hooks/useTranslations';
 
 interface ServiceCardProps {
   service: Service;
@@ -46,7 +44,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, titleKey, descriptio
 };
 
 
-const ServicesSection: React.FC = () => {
+// Fix: Export the component.
+export const ServicesSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
     const { t } = useTranslations();
@@ -83,5 +82,3 @@ const ServicesSection: React.FC = () => {
         </section>
     );
 };
-
-export default ServicesSection;

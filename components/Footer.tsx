@@ -1,7 +1,9 @@
+// Fix: Add necessary imports.
+import React from 'react';
+import { useTranslations } from '../hooks/useTranslations';
 
-import useTranslations from '../hooks/useTranslations';
-
-const Footer: React.FC = () => {
+// Fix: Export the component.
+export const Footer: React.FC = () => {
     const { t } = useTranslations();
     return (
         <footer className="bg-brand-dark border-t border-brand-gold/20 py-8">
@@ -12,5 +14,3 @@ const Footer: React.FC = () => {
         </footer>
     );
 };
-
-export default Footer;

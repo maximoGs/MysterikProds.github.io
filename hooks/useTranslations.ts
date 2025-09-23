@@ -1,3 +1,4 @@
+// Fix: Import the useLanguage hook to resolve the "Cannot find name" error.
 import { useLanguage } from '../contexts/LanguageContext';
 
 // Helper function to get nested properties from an object using a string path
@@ -23,7 +24,8 @@ const get = (obj: Record<string, any>, path: string): string => {
   return path;
 };
 
-const useTranslations = () => {
+// Fix: Export the hook to be used in other modules.
+export const useTranslations = () => {
   const { translations } = useLanguage();
 
   const t = (key: string): string => {
@@ -32,5 +34,3 @@ const useTranslations = () => {
 
   return { t };
 };
-
-export default useTranslations;

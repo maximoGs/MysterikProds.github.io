@@ -1,8 +1,5 @@
-
-// Fix: Import React to resolve UMD global error.
-import React from 'react';
-
-const { createContext, useState, useContext, useEffect, useMemo } = React;
+// Fix: Replace UMD-style destructuring with a proper module import for React.
+import React, { createContext, useState, useContext, useEffect, useMemo } from 'react';
 
 type Language = 'en' | 'es' | 'pt';
 
@@ -14,6 +11,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+// Fix: Export the provider component.
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
   const [translations, setTranslations] = useState<Record<string, any>>({});
@@ -74,6 +72,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   );
 };
 
+// Fix: Export the custom hook.
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
   if (context === undefined) {

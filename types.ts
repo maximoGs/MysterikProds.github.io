@@ -1,4 +1,7 @@
+// Fix: Add React import for React.ReactNode type.
+import React from 'react';
 
+// Fix: Export all interfaces to make them available in other modules.
 export interface Service {
   title: string;
   description: string;
@@ -40,7 +43,6 @@ export interface GalleryImage {
   description: string;
 }
 
-// Fix: Add MapPoint interface to define the shape of map location data for the ArcaneMapSection component.
 export interface MapPoint {
   id: number;
   title: string;

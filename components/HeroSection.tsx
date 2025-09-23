@@ -1,8 +1,10 @@
+// Fix: Add necessary imports for React, child components, and hooks.
+import React from 'react';
+import { useTranslations } from '../hooks/useTranslations';
+import { ParticleBackground } from './ParticleBackground';
 
-import ParticleBackground from './ParticleBackground';
-import useTranslations from '../hooks/useTranslations';
-
-const HeroSection: React.FC = () => {
+// Fix: Export the component.
+export const HeroSection: React.FC = () => {
   const { t } = useTranslations();
 
   return (
@@ -28,5 +30,3 @@ const HeroSection: React.FC = () => {
     </section>
   );
 };
-
-export default HeroSection;

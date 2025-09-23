@@ -1,14 +1,13 @@
-
-// Fix: Import React to resolve UMD global error.
-import React from 'react';
+// Fix: Replace UMD-style destructuring with a proper module import.
+import React, { useState, useRef } from 'react';
+// Fix: Import dependencies to resolve undefined variables.
 import { GALLERY_IMAGES } from '../constants';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import useTranslations from '../hooks/useTranslations';
-import Lightbox from './Lightbox';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useTranslations } from '../hooks/useTranslations';
+import { Lightbox } from './Lightbox';
 
-const { useState, useRef } = React;
-
-const AlchemicalGallerySection: React.FC = () => {
+// Fix: Export the component.
+export const AlchemicalGallerySection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
     const { t } = useTranslations();
@@ -68,5 +67,3 @@ const AlchemicalGallerySection: React.FC = () => {
         </>
     );
 };
-
-export default AlchemicalGallerySection;

@@ -1,8 +1,6 @@
-
-// Fix: Import React to resolve UMD global error.
+// Fix: Replace UMD-style destructuring with a proper module import.
+import { useState, useEffect } from 'react';
 import React from 'react';
-
-const { useState, useEffect } = React;
 
 interface ObserverOptions {
     root?: Element | null;
@@ -11,7 +9,8 @@ interface ObserverOptions {
     triggerOnce?: boolean;
 }
 
-const useIntersectionObserver = (
+// Fix: Export the hook to be used in other modules.
+export const useIntersectionObserver = (
     elementRef: React.RefObject<Element>,
     {
         threshold = 0.1,
@@ -54,5 +53,3 @@ const useIntersectionObserver = (
 
     return isIntersecting;
 };
-
-export default useIntersectionObserver;

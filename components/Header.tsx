@@ -1,10 +1,8 @@
-
-// Fix: Import React to resolve UMD global error.
-import React from 'react';
-import useTranslations from '../hooks/useTranslations';
-import LanguageSelector from './LanguageSelector';
-
-const { useState, useEffect } = React;
+// Fix: Replace UMD-style destructuring with a proper module import.
+import React, { useState, useEffect } from 'react';
+// Fix: Import the LanguageSelector component and useTranslations hook.
+import { LanguageSelector } from './LanguageSelector';
+import { useTranslations } from '../hooks/useTranslations';
 
 const MysticalSymbol: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +13,8 @@ const MysticalSymbol: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 
-const Header: React.FC = () => {
+// Fix: Export the Header component.
+export const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const { t } = useTranslations();
@@ -73,5 +72,3 @@ const Header: React.FC = () => {
         </header>
     );
 };
-
-export default Header;

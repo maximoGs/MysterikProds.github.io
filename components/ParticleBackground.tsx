@@ -1,10 +1,8 @@
+// Fix: Replace UMD-style destructuring with a proper module import.
+import React, { useMemo } from 'react';
 
-// Fix: Import React to resolve UMD global error.
-import React from 'react';
-
-const { useMemo } = React;
-
-const ParticleBackground: React.FC = () => {
+// Fix: Export the component to be used in other modules.
+export const ParticleBackground: React.FC = () => {
   const particles = useMemo(() => {
     return Array.from({ length: 150 }).map((_, i) => {
       const isOrb = Math.random() > 0.3; // 70% are orbs, 30% are stardust
@@ -106,5 +104,3 @@ const ParticleBackground: React.FC = () => {
     </div>
   );
 };
-
-export default ParticleBackground;

@@ -1,10 +1,9 @@
-
-// Fix: Import React and ReactDOM to resolve UMD global errors.
-import React from 'react';
+// Fix: Replace UMD-style destructuring with a proper module import for React.
+import React, { useEffect } from 'react';
+// Fix: Add import for ReactDOM to resolve UMD global error.
 import ReactDOM from 'react-dom';
-import useTranslations from '../hooks/useTranslations';
-
-const { useEffect } = React;
+// Fix: Import the useTranslations hook.
+import { useTranslations } from '../hooks/useTranslations';
 
 interface ModalProps {
     isOpen: boolean;
@@ -12,7 +11,8 @@ interface ModalProps {
     children: React.ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+// Fix: Export the component.
+export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     const { t } = useTranslations();
     useEffect(() => {
         const handleEscape = (event: KeyboardEvent) => {
@@ -60,5 +60,3 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         document.body
     );
 };
-
-export default Modal;

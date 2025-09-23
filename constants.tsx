@@ -1,6 +1,6 @@
-
-// Fix: Import the newly created MapPoint type to be used with the MAP_POINTS constant.
-import type { Service, TeamMember, PortfolioItem, NewsPost, GalleryImage, MapPoint } from './types';
+// Fix: Add React import for JSX and import required types.
+import React from 'react';
+import { Service, TeamMember, PortfolioItem, NewsPost, GalleryImage, MapPoint } from './types';
 
 const EyeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
@@ -24,6 +24,7 @@ const CompassIcon = () => (
 );
 
 
+// Fix: Export constants to be used in other files.
 export const SERVICES: Service[] = [
   {
     title: 'Brand Mythology',
@@ -123,7 +124,6 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     { id: 8, src: 'https://picsum.photos/seed/gallery8/800/1000', title: 'Shadow & Light', description: 'An experimental shot exploring contrast and form.'},
 ];
 
-// Fix: Add MAP_POINTS constant to provide data for the ArcaneMapSection component.
 export const MAP_POINTS: MapPoint[] = [
   {
     id: 1,

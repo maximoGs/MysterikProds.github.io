@@ -1,11 +1,10 @@
-
-// Fix: Import React and ReactDOM to resolve UMD global errors.
-import React from 'react';
+// Fix: Replace UMD-style destructuring with a proper module import for React.
+import React, { useEffect } from 'react';
+// Fix: Add import for ReactDOM to resolve UMD global error.
 import ReactDOM from 'react-dom';
-import type { GalleryImage } from '../types';
-import useTranslations from '../hooks/useTranslations';
-
-const { useEffect } = React;
+// Fix: Import dependencies.
+import { GalleryImage } from '../types';
+import { useTranslations } from '../hooks/useTranslations';
 
 // Fix: Update icon components to accept a `size` prop for custom dimensions.
 const ChevronLeftIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"></polyline></svg>;
@@ -19,7 +18,8 @@ interface LightboxProps {
     setCurrentIndex: (index: number) => void;
 }
 
-const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, setCurrentIndex }) => {
+// Fix: Export the component.
+export const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, setCurrentIndex }) => {
     const { t } = useTranslations();
     const totalImages = images.length;
 
@@ -109,5 +109,3 @@ const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, setC
         document.body
     );
 };
-
-export default Lightbox;
