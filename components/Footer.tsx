@@ -1,8 +1,10 @@
-// Fix: Add necessary imports.
+// FIX: Add imports for React and hooks to satisfy the TypeScript compiler.
 import React from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 
-// Fix: Export the component.
+// React and useTranslations hook are available globally.
+
+// FIX: Export Footer component to be importable in other modules.
 export const Footer: React.FC = () => {
     const { t } = useTranslations();
     return (

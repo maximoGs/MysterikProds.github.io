@@ -1,12 +1,13 @@
-// Fix: Replace UMD-style destructuring with a proper module import.
+// FIX: Add imports for React, constants, hooks, and components to satisfy the TypeScript compiler.
 import React, { useState, useRef } from 'react';
-// Fix: Import dependencies to resolve undefined variables.
 import { GALLERY_IMAGES } from '../constants';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useTranslations } from '../hooks/useTranslations';
 import { Lightbox } from './Lightbox';
 
-// Fix: Export the component.
+// React, constants, hooks, and Lightbox component are available globally.
+
+// FIX: Export AlchemicalGallerySection component to be importable in other modules.
 export const AlchemicalGallerySection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });

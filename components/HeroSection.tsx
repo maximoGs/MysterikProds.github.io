@@ -1,9 +1,11 @@
-// Fix: Add necessary imports for React, child components, and hooks.
+// FIX: Add imports for React, hooks, and components to satisfy the TypeScript compiler.
 import React from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { ParticleBackground } from './ParticleBackground';
 
-// Fix: Export the component.
+// React, useTranslations hook, and ParticleBackground component are available globally.
+
+// FIX: Export HeroSection component to be importable in other modules.
 export const HeroSection: React.FC = () => {
   const { t } = useTranslations();
 

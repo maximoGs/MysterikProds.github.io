@@ -1,11 +1,12 @@
-// Fix: Replace UMD-style destructuring with a proper module import.
+// FIX: Add imports for React, constants, and hooks to satisfy the TypeScript compiler.
 import React, { useRef } from 'react';
-// Fix: Import constants and hooks to resolve undefined variables.
 import { PORTFOLIO_ITEMS } from '../constants';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useTranslations } from '../hooks/useTranslations';
 
-// Fix: Export the component.
+// React, constants, and hooks are available globally.
+
+// FIX: Export PortfolioSection component to be importable in other modules.
 export const PortfolioSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });

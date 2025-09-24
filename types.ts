@@ -1,7 +1,10 @@
-// Fix: Add React import for React.ReactNode type.
+// FIX: Add import for React to use React.ReactNode type.
 import React from 'react';
 
-// Fix: Export all interfaces to make them available in other modules.
+// Interfaces are defined in the global scope and available to all other scripts
+// loaded after this one in index.html.
+
+// FIX: Export interfaces to make them available for import in other modules.
 export interface Service {
   title: string;
   description: string;

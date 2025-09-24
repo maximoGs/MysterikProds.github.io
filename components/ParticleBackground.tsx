@@ -1,7 +1,9 @@
-// Fix: Replace UMD-style destructuring with a proper module import.
+// FIX: Add import for React to satisfy the TypeScript compiler.
 import React, { useMemo } from 'react';
 
-// Fix: Export the component to be used in other modules.
+// React is available globally from the CDN script.
+
+// FIX: Export ParticleBackground component to be importable in other modules.
 export const ParticleBackground: React.FC = () => {
   const particles = useMemo(() => {
     return Array.from({ length: 150 }).map((_, i) => {

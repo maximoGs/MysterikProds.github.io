@@ -1,8 +1,9 @@
-// Fix: Replace UMD-style destructuring with a proper module import.
+// FIX: Add imports for React, hooks, and components to satisfy the TypeScript compiler.
 import React, { useState, useEffect } from 'react';
-// Fix: Import the LanguageSelector component and useTranslations hook.
-import { LanguageSelector } from './LanguageSelector';
 import { useTranslations } from '../hooks/useTranslations';
+import { LanguageSelector } from './LanguageSelector';
+
+// React, LanguageSelector component, and useTranslations hook are available globally.
 
 const MysticalSymbol: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +14,7 @@ const MysticalSymbol: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 
-// Fix: Export the Header component.
+// FIX: Export Header component to be importable in other modules.
 export const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);

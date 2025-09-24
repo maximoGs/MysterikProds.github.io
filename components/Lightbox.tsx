@@ -1,12 +1,11 @@
-// Fix: Replace UMD-style destructuring with a proper module import for React.
+// FIX: Add imports for React, ReactDOM, types, and hooks to satisfy the TypeScript compiler.
 import React, { useEffect } from 'react';
-// Fix: Add import for ReactDOM to resolve UMD global error.
 import ReactDOM from 'react-dom';
-// Fix: Import dependencies.
-import { GalleryImage } from '../types';
 import { useTranslations } from '../hooks/useTranslations';
+import { GalleryImage } from '../types';
 
-// Fix: Update icon components to accept a `size` prop for custom dimensions.
+// React, ReactDOM, types, and hooks are available globally.
+
 const ChevronLeftIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"></polyline></svg>;
 const ChevronRightIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>;
 const XIcon: React.FC<{ size?: number }> = ({ size = 24 }) => <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={`${size}px`} width={`${size}px`} xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>;
@@ -18,7 +17,7 @@ interface LightboxProps {
     setCurrentIndex: (index: number) => void;
 }
 
-// Fix: Export the component.
+// FIX: Export Lightbox component to be importable in other modules.
 export const Lightbox: React.FC<LightboxProps> = ({ images, currentIndex, onClose, setCurrentIndex }) => {
     const { t } = useTranslations();
     const totalImages = images.length;

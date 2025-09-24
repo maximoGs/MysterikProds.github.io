@@ -1,5 +1,7 @@
-// Fix: Replace UMD-style destructuring with a proper module import for React.
+// FIX: Add import for React to satisfy the TypeScript compiler.
 import React, { createContext, useState, useContext, useEffect, useMemo } from 'react';
+
+// React is available globally from the CDN script.
 
 type Language = 'en' | 'es' | 'pt';
 
@@ -11,7 +13,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Fix: Export the provider component.
+// FIX: Export LanguageProvider to be importable in other modules.
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
   const [translations, setTranslations] = useState<Record<string, any>>({});
@@ -72,7 +74,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   );
 };
 
-// Fix: Export the custom hook.
+// FIX: Export useLanguage hook to be importable in other modules.
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
   if (context === undefined) {

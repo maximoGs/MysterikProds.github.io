@@ -1,7 +1,8 @@
-// Fix: Replace UMD-style destructuring with a proper module import.
+// FIX: Add imports for React and useLanguage hook to satisfy the TypeScript compiler.
 import React, { useState, useRef, useEffect } from 'react';
-// Fix: Import the useLanguage hook to resolve "Cannot find name" error.
 import { useLanguage } from '../contexts/LanguageContext';
+
+// React and useLanguage hook are available globally.
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -11,7 +12,7 @@ const languages = [
 
 type LanguageCode = typeof languages[number]['code'];
 
-// Fix: Export the component.
+// FIX: Export LanguageSelector component to be importable in other modules.
 export const LanguageSelector: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);

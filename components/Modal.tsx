@@ -1,9 +1,9 @@
-// Fix: Replace UMD-style destructuring with a proper module import for React.
+// FIX: Add imports for React, ReactDOM, and hooks to satisfy the TypeScript compiler.
 import React, { useEffect } from 'react';
-// Fix: Add import for ReactDOM to resolve UMD global error.
 import ReactDOM from 'react-dom';
-// Fix: Import the useTranslations hook.
 import { useTranslations } from '../hooks/useTranslations';
+
+// React, ReactDOM, and useTranslations hook are available globally.
 
 interface ModalProps {
     isOpen: boolean;
@@ -11,7 +11,7 @@ interface ModalProps {
     children: React.ReactNode;
 }
 
-// Fix: Export the component.
+// FIX: Export Modal component to be importable in other modules.
 export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     const { t } = useTranslations();
     useEffect(() => {

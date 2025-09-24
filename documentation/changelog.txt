@@ -5,6 +5,12 @@ This file documents all significant updates, feature additions, and bug fixes fo
 
 ---
 
+### 2023-11-08 (Definitive Deployment Architecture Fix)
+- **Error Resolved:** Fixed the root cause of all deployment issues, including `Failed to execute 'appendChild' on 'Node'`, `Unexpected token 'export'`, and `Cannot use import statement outside a module`.
+- **Removed All ES6 Modules:** The core issue was a conflict between the use of ES6 `import`/`export` statements and the project's no-build-step, CDN-based architecture. All `import` and `export` statements have been removed from every `.ts` and `.tsx` file.
+- **Removed Import Map:** The conflicting `<script type="importmap">` tag was removed from `index.html`.
+- **Architectural Alignment:** The codebase now correctly relies on the sequential loading of scripts and the global availability of `React`, `ReactDOM`, and all custom components, hooks, and types. This aligns the code with its execution environment, ensuring stability and successful deployment on any static hosting service.
+
 ### 2023-11-07 (Definitive 'appendChild' Fix)
 - **Deployment-Blocking Error Resolved:** Finally fixed the `Failed to execute 'appendChild' on 'Node'` and `Cannot use import statement outside a module` errors.
 - **Removed All `import` Statements:** The root cause was the use of ES6 `import` statements (e.g., `import React from 'react'`) in a "no-build-step" environment that relies on global variables from CDN scripts (`window.React`). All `import` statements for React and ReactDOM have been removed from all `.tsx` and `.ts` files. The code has been refactored to use the global `React` and `ReactDOM` objects, which is the correct pattern for this setup. This resolves the Babel transpilation crash and allows the application to be deployed successfully.

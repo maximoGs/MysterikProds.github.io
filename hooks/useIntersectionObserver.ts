@@ -1,6 +1,7 @@
-// Fix: Replace UMD-style destructuring with a proper module import.
-import { useState, useEffect } from 'react';
-import React from 'react';
+// FIX: Add import for React to satisfy the TypeScript compiler.
+import React, { useState, useEffect } from 'react';
+
+// React is available globally from the CDN script.
 
 interface ObserverOptions {
     root?: Element | null;
@@ -9,7 +10,7 @@ interface ObserverOptions {
     triggerOnce?: boolean;
 }
 
-// Fix: Export the hook to be used in other modules.
+// FIX: Export hook to be importable in other modules.
 export const useIntersectionObserver = (
     elementRef: React.RefObject<Element>,
     {

@@ -1,10 +1,11 @@
-// Fix: Replace UMD-style destructuring with a proper module import for React.
+// FIX: Add imports for React and hooks to satisfy the TypeScript compiler.
 import React, { useRef } from 'react';
-// Fix: Import custom hooks used in the component.
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useTranslations } from '../hooks/useTranslations';
 
-// Fix: Export the component.
+// React and custom hooks (useIntersectionObserver, useTranslations) are available globally.
+
+// FIX: Export ManifestoSection component to be importable in other modules.
 export const ManifestoSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });

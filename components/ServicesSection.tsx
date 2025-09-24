@@ -1,10 +1,11 @@
-// Fix: Replace UMD-style destructuring with a proper module import.
+// FIX: Add imports for React, types, constants, and hooks to satisfy the TypeScript compiler.
 import React, { useState, useRef } from 'react';
-// Fix: Import types, constants, and hooks to resolve undefined variables.
-import { Service } from '../types';
-import { SERVICES } from '../constants';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useTranslations } from '../hooks/useTranslations';
+import { Service } from '../types';
+import { SERVICES } from '../constants';
+
+// React, types, constants, and hooks are available globally.
 
 interface ServiceCardProps {
   service: Service;
@@ -44,7 +45,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, titleKey, descriptio
 };
 
 
-// Fix: Export the component.
+// FIX: Export ServicesSection component to be importable in other modules.
 export const ServicesSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });

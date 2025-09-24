@@ -1,6 +1,8 @@
-// Fix: Add necessary imports.
+// FIX: Add imports for React and hooks to satisfy the TypeScript compiler.
 import React from 'react';
 import { useTranslations } from '../hooks/useTranslations';
+
+// React and useTranslations hook are available globally.
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -9,7 +11,7 @@ const WhatsAppIcon: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 
-// Fix: Export the component.
+// FIX: Export FloatingWhatsApp component to be importable in other modules.
 export const FloatingWhatsApp: React.FC = () => {
     const { t } = useTranslations();
     return (

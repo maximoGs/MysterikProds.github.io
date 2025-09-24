@@ -1,6 +1,10 @@
-// Fix: Add React import for JSX and import required types.
+// FIX: Import React and types to satisfy the TypeScript compiler.
 import React from 'react';
-import { Service, TeamMember, PortfolioItem, NewsPost, GalleryImage, MapPoint } from './types';
+import { GalleryImage, MapPoint, NewsPost, PortfolioItem, Service, TeamMember } from './types';
+
+// Types are globally available from types.ts.
+// React is globally available from the CDN script.
+// Constants are defined in the global scope for other components to use.
 
 const EyeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
@@ -24,7 +28,7 @@ const CompassIcon = () => (
 );
 
 
-// Fix: Export constants to be used in other files.
+// FIX: Export constants to make them available for import in other modules.
 export const SERVICES: Service[] = [
   {
     title: 'Brand Mythology',
