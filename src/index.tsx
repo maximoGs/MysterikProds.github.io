@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './App';
-import { LanguageProvider } from './contexts/LanguageContext';
+import { App } from './App.tsx';
+import { LanguageProvider } from './contexts/LanguageContext.tsx';
 import './styles/index.css';
 
 // All dependencies like React, ReactDOM, App, and LanguageProvider are loaded
