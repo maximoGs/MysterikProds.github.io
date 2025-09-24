@@ -1,8 +1,8 @@
-// FIX: Add imports for React, ReactDOM, App, and LanguageProvider to satisfy the TypeScript compiler.
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
 import { LanguageProvider } from './contexts/LanguageContext';
+import './styles/index.css';
 
 // All dependencies like React, ReactDOM, App, and LanguageProvider are loaded
 // via script tags in index.html and are available globally.

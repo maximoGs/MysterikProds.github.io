@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-brand-dark text-brand-parchment font-sans;
+}
+
+.text-gold-gradient {
+  @apply bg-gradient-to-br from-brand-gold-light to-brand-gold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 5px rgba(251, 245, 183, 0.8);
+}
+
+.gold-glow-hard {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.8), 0 0 10px rgba(251, 245, 183, 1);
+}

@@ -2,46 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mysterik Producciones</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              'serif-alt': ['"Cormorant Garamond"', 'serif'],
-              sans: ['"Montserrat"', 'sans-serif'],
-            },
-            colors: {
-              'brand-gold': '#D4AF37',
-              'brand-gold-light': '#FBF5B7',
-              'brand-dark': '#0a0a0a',
-              'brand-parchment': '#fdf6e3',
-            },
-            animation: {
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-            },
-            keyframes: {
-              float: {
-                '0%': { transform: 'translateY(0px)' },
-                '50%': { transform: 'translateY(-20px)' },
-                '100%': { transform: 'translateY(0px)' },
-              }
-            }
-          },
-        },
-      }
-    </script>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react.dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
       body {
         background-color: #0a0a0a;
@@ -74,49 +40,9 @@
         box-shadow: 0 0 25px rgba(212, 175, 55, 0.8), 0 0 10px rgba(251, 245, 183, 1);
       }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1"
-  }
-}
-</script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
-    
-    <!-- Load all scripts in dependency order -->
-    <!-- Types, Hooks, Contexts, Constants -->
-    <script type="text/babel" data-presets="react,typescript" src="./types.ts"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./hooks/useIntersectionObserver.ts"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./contexts/LanguageContext.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./hooks/useTranslations.ts"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./constants.tsx"></script>
-
-    <!-- Components -->
-    <script type="text/babel" data-presets="react,typescript" src="./components/ParticleBackground.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/Modal.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/Lightbox.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/LanguageSelector.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/Header.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/HeroSection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/ManifestoSection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/ServicesSection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/PortfolioSection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/TeamSection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/NewsSection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/ContactSection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/AlchemicalGallerySection.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/Footer.tsx"></script>
-    <script type="text/babel" data-presets="react,typescript" src="./components/FloatingWhatsApp.tsx"></script>
-    
-    <!-- App Root -->
-    <script type="text/babel" data-presets="react,typescript" src="./App.tsx"></script>
-
-    <!-- Main entry point -->
-    <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
