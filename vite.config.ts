@@ -10,6 +10,12 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
+        fs: {
+          strict: false
+        },
+        headers: {
+          'Content-Type': 'application/javascript'
+        }
       },
       plugins: [
         react({
