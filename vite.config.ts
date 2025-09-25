@@ -13,30 +13,12 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
         fs: {
           strict: false
-        },
-        headers: {
-          'Content-Type': 'application/javascript'
         }
       },
       plugins: [
-        react({
-          jsxRuntime: 'automatic',
-          babel: {
-            plugins: [
-              [
-                'babel-plugin-styled-components',
-                {
-                  displayName: true,
-                  pure: true
-                }
-              ]
-            ]
-          }
-        })
+        react()
       ],
       define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         __DEV__: !isProd
       },
       resolve: {
