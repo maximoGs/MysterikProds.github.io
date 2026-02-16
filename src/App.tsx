@@ -1,4 +1,3 @@
-// FIX: Add imports for React and all child components to satisfy the TypeScript compiler.
 import React from 'react';
 import { AlchemicalGallerySection } from './components/AlchemicalGallerySection';
 import { ContactSection } from './components/ContactSection';
@@ -9,13 +8,11 @@ import { HeroSection } from './components/HeroSection';
 import { ManifestoSection } from './components/ManifestoSection';
 import { NewsSection } from './components/NewsSection';
 import { PortfolioSection } from './components/PortfolioSection';
+import { ScrollToTop } from './components/ScrollToTop';
 import { ServicesSection } from './components/ServicesSection';
 import { TeamSection } from './components/TeamSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
 
-// All child components are loaded via script tags in index.html
-// and are available globally in this scope.
-
-// FIX: Export App component to be importable in other modules like index.tsx.
 export const App = () => {
   return (
     <div className="bg-brand-dark min-h-screen overflow-x-hidden">
@@ -25,6 +22,7 @@ export const App = () => {
         <ManifestoSection />
         <ServicesSection />
         <PortfolioSection />
+        <TestimonialsSection />
         <AlchemicalGallerySection />
         <TeamSection />
         <NewsSection />
@@ -32,6 +30,7 @@ export const App = () => {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
     </div>
   );
 };

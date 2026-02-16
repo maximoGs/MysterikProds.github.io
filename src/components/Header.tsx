@@ -1,20 +1,7 @@
-// FIX: Add imports for React, hooks, and components to satisfy the TypeScript compiler.
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { LanguageSelector } from './LanguageSelector';
 
-// React, LanguageSelector component, and useTranslations hook are available globally.
-
-const MysticalSymbol: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 10 V 90 M10 50 H 90" stroke="currentColor" strokeWidth="4" />
-        <circle cx="50" cy="50" r="25" stroke="currentColor" strokeWidth="4" />
-        <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" />
-    </svg>
-);
-
-
-// FIX: Export Header component to be importable in other modules.
 export const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -39,9 +26,13 @@ export const Header: React.FC = () => {
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-dark/90 backdrop-blur-sm shadow-lg shadow-brand-gold/10' : 'bg-transparent'}`}>
-            <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#" className="flex items-center space-x-2 text-brand-gold hover:text-brand-gold-light transition-colors">
-                    <MysticalSymbol className="h-8 w-8" />
+            <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
+                <a href="#" className="flex items-center space-x-3 text-brand-gold hover:text-brand-gold-light transition-colors group">
+                    <img 
+                        src="/assets/logo.png" 
+                        alt="Mysterik Logo" 
+                        className="h-10 w-10 rounded-full object-cover border border-brand-gold/40 group-hover:border-brand-gold transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(212,175,55,0.5)]"
+                    />
                     <span className="font-serif text-xl font-bold tracking-wider">MYSTERIK</span>
                 </a>
                 <div className="hidden md:flex items-center space-x-6">
@@ -62,7 +53,7 @@ export const Header: React.FC = () => {
                 </div>
             </nav>
             {isOpen && (
-                <div className="md:hidden bg-brand-dark/95">
+                <div className="md:hidden bg-brand-dark/95 backdrop-blur-sm">
                     {navLinks.map(link => (
                          <a key={link.key} href={link.href} onClick={() => setIsOpen(false)} className="block py-3 px-6 text-center text-brand-parchment hover:bg-brand-gold/10 hover:text-brand-gold transition-colors font-sans uppercase tracking-widest text-sm">
                             {t(`header.${link.key}`)}

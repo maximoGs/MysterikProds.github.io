@@ -142,13 +142,38 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
           }
         }
       },
+      "testimonials": {
+        "title": "Voces del Círculo",
+        "description": "Lo que dicen quienes han experimentado nuestra alquimia creativa.",
+        "items": {
+          "t1": {
+            "quote": "Mysterik transformó nuestra marca de bodega en una experiencia visual que resuena en todo el mundo. Su comprensión del terroir mendocino es inigualable.",
+            "author": "Valentina Moretti",
+            "role": "Directora de Marketing — Viñedos del Sur"
+          },
+          "t2": {
+            "quote": "Trabajar con el equipo de Mysterik fue como ver a artesanos en acción. Cada fotograma de nuestro comercial cuenta una historia con alma.",
+            "author": "Santiago Herrera",
+            "role": "CEO — Grupo Andino Hotels"
+          },
+          "t3": {
+            "quote": "No solo crearon un video; construyeron toda una mitología para nuestra marca. Las ventas y el reconocimiento se dispararon después de la campaña.",
+            "author": "Camila Ríos",
+            "role": "Fundadora — Estudio Nómada"
+          }
+        }
+      },
       "contact": {
         "title": "Únase a Nuestro Círculo Íntimo",
         "description": "Inicie el ritual. Contáctenos para obtener acceso a conocimientos exclusivos y para discutir cómo nuestra alquimia puede forjar su legado.",
         "namePlaceholder": "Su Nombre",
         "emailPlaceholder": "Su Correo Electrónico",
         "messagePlaceholder": "Su Mensaje",
-        "cta": "Enviar Invocación"
+        "cta": "Enviar Invocación",
+        "success": "¡Su invocación ha sido enviada! Nos pondremos en contacto pronto."
+      },
+      "scrollToTop": {
+        "ariaLabel": "Volver arriba"
       },
       "footer": {
         "rights": "Todos los Ritos Reservados.",
@@ -292,13 +317,38 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
           }
         }
       },
+      "testimonials": {
+        "title": "Voices of the Circle",
+        "description": "What those who have experienced our creative alchemy have to say.",
+        "items": {
+          "t1": {
+            "quote": "Mysterik transformed our winery brand into a visual experience that resonates worldwide. Their understanding of Mendoza's terroir is unmatched.",
+            "author": "Valentina Moretti",
+            "role": "Marketing Director — Viñedos del Sur"
+          },
+          "t2": {
+            "quote": "Working with the Mysterik team was like watching artisans at work. Every frame of our commercial tells a story with soul.",
+            "author": "Santiago Herrera",
+            "role": "CEO — Grupo Andino Hotels"
+          },
+          "t3": {
+            "quote": "They didn't just create a video; they built an entire mythology for our brand. Sales and recognition skyrocketed after the campaign.",
+            "author": "Camila Ríos",
+            "role": "Founder — Estudio Nómada"
+          }
+        }
+      },
       "contact": {
         "title": "Join Our Inner Circle",
         "description": "Begin the ritual. Contact us to gain access to exclusive insights and to discuss how our alchemy can forge your legacy.",
         "namePlaceholder": "Your Name",
         "emailPlaceholder": "Your Email",
         "messagePlaceholder": "Your Message",
-        "cta": "Send Invocation"
+        "cta": "Send Invocation",
+        "success": "Your invocation has been sent! We will be in touch soon."
+      },
+      "scrollToTop": {
+        "ariaLabel": "Scroll to top"
       },
       "footer": {
         "rights": "All Rites Reserved.",
@@ -442,13 +492,38 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
           }
         }
       },
+      "testimonials": {
+        "title": "Vozes do Círculo",
+        "description": "O que dizem aqueles que experimentaram nossa alquimia criativa.",
+        "items": {
+          "t1": {
+            "quote": "A Mysterik transformou nossa marca de vinícola em uma experiência visual que ressoa no mundo todo. Sua compreensão do terroir mendocino é incomparável.",
+            "author": "Valentina Moretti",
+            "role": "Diretora de Marketing — Viñedos del Sur"
+          },
+          "t2": {
+            "quote": "Trabalhar com a equipe da Mysterik foi como ver artesãos em ação. Cada quadro do nosso comercial conta uma história com alma.",
+            "author": "Santiago Herrera",
+            "role": "CEO — Grupo Andino Hotels"
+          },
+          "t3": {
+            "quote": "Eles não apenas criaram um vídeo; construíram toda uma mitologia para nossa marca. As vendas e o reconhecimento dispararam após a campanha.",
+            "author": "Camila Ríos",
+            "role": "Fundadora — Estudio Nómada"
+          }
+        }
+      },
       "contact": {
         "title": "Junte-se ao Nosso Círculo Interno",
         "description": "Inicie o ritual. Entre em contato para obter acesso a informações exclusivas e para discutir como nossa alquimia pode forjar seu legado.",
         "namePlaceholder": "Seu Nome",
         "emailPlaceholder": "Seu Email",
         "messagePlaceholder": "Sua Mensagem",
-        "cta": "Enviar Invocação"
+        "cta": "Enviar Invocação",
+        "success": "Sua invocação foi enviada! Entraremos em contato em breve."
+      },
+      "scrollToTop": {
+        "ariaLabel": "Voltar ao topo"
       },
       "footer": {
         "rights": "Todos os Ritos Reservados.",
