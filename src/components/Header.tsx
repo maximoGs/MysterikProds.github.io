@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { LanguageSelector } from './LanguageSelector';
+import logoImg from '../assets/logo.png';
 
 export const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +29,9 @@ export const Header: React.FC = () => {
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-dark/90 backdrop-blur-sm shadow-lg shadow-brand-gold/10' : 'bg-transparent'}`}>
             <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
                 <a href="#" className="flex items-center space-x-3 text-brand-gold hover:text-brand-gold-light transition-colors group">
-                    <img 
-                        src="/assets/logo.png" 
-                        alt="Mysterik Logo" 
+                    <img
+                        src={logoImg}
+                        alt="Mysterik Logo"
                         className="h-10 w-10 rounded-full object-cover border border-brand-gold/40 group-hover:border-brand-gold transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(212,175,55,0.5)]"
                     />
                     <span className="font-serif text-xl font-bold tracking-wider">MYSTERIK</span>
@@ -55,7 +56,7 @@ export const Header: React.FC = () => {
             {isOpen && (
                 <div className="md:hidden bg-brand-dark/95 backdrop-blur-sm">
                     {navLinks.map(link => (
-                         <a key={link.key} href={link.href} onClick={() => setIsOpen(false)} className="block py-3 px-6 text-center text-brand-parchment hover:bg-brand-gold/10 hover:text-brand-gold transition-colors font-sans uppercase tracking-widest text-sm">
+                        <a key={link.key} href={link.href} onClick={() => setIsOpen(false)} className="block py-3 px-6 text-center text-brand-parchment hover:bg-brand-gold/10 hover:text-brand-gold transition-colors font-sans uppercase tracking-widest text-sm">
                             {t(`header.${link.key}`)}
                         </a>
                     ))}

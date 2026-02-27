@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { ParticleBackground } from './ParticleBackground';
+import logoImg from '../assets/logo.png';
 
 export const HeroSection: React.FC = () => {
   const { t } = useTranslations();
@@ -13,7 +14,7 @@ export const HeroSection: React.FC = () => {
         {/* Hero Logo with floating animation and glow */}
         <div className="mb-6 animate-float">
           <img
-            src="/assets/logo.png"
+            src={logoImg}
             alt="Mysterik Producciones Logo"
             className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-2 border-brand-gold/50 shadow-[0_0_30px_rgba(212,175,55,0.4),0_0_60px_rgba(212,175,55,0.15)]"
           />

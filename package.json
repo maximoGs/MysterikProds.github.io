@@ -9,7 +9,9 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "analyze": "vite build --mode analyze"
+    "analyze": "vite build --mode analyze",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.2",
@@ -27,6 +29,7 @@
     "autoprefixer": "^10.4.17",
     "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9.36.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.35",
     "prettier": "^3.6.2",
     "rollup-plugin-visualizer": "^6.0.3",

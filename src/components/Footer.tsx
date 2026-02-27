@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslations } from '../hooks/useTranslations';
+import logoImg from '../assets/logo.png';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +35,7 @@ export const Footer: React.FC = () => {
                 {/* Top: logo + social */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
                     <div className="flex items-center space-x-3">
-                        <img src="/assets/logo.png" alt="Mysterik" className="w-10 h-10 rounded-full object-cover border border-brand-gold/40" />
+                        <img src={logoImg} alt="Mysterik" className="w-10 h-10 rounded-full object-cover border border-brand-gold/40" />
                         <span className="font-serif text-xl font-bold tracking-wider text-brand-gold">MYSTERIK</span>
                     </div>
                     <div className="flex items-center space-x-5">
