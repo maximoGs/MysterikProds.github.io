@@ -97,29 +97,35 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         "prevAria": "Miembro anterior del equipo",
         "nextAria": "Siguiente miembro del equipo",
         "members": {
-          "elara": {
-            "role": "La Suma Sacerdotisa",
-            "title": "CEO y Visionaria",
-            "bio": "Elara canaliza la visión creativa de Mysterik, guiando al aquelarre con intuición y perspicacia estratégica. Su conexión con las corrientes subterráneas del mercado es la fuente de nuestro poder.",
-            "keywords": "Alquimia de Marca, Visión Estratégica, Intuición de Mercado, Liderazgo"
+          "sofia": {
+            "role": "Diseñadora",
+            "title": "Diseñadora (Sede en España)",
+            "bio": "Con sede en España, Sofía aporta una perspectiva global y estética refinada a cada proyecto, tendiendo puentes entre continentes a través del diseño visual.",
+            "keywords": "Diseño Gráfico, Dirección de Arte, Diseño Internacional"
           },
-          "jax": {
-            "role": "El Mago",
-            "title": "Director Creativo",
-            "bio": "Jax manifiesta las ideas en realidad. Un maestro de las artes visuales y narrativas, maneja las herramientas de la creación para lanzar potentes hechizos de compromiso y deseo.",
-            "keywords": "Dirección de Cine, Narrativa Visual, Conceptualización Creativa, Magia UX"
+          "augusto": {
+            "role": "Desarrollador",
+            "title": "Desarrollador de software",
+            "bio": "Augusto transforma visiones creativas en realidades digitales robustas. Su dominio del código asegura que cada experiencia de Mysterik sea rápida, escalable e inmersiva.",
+            "keywords": "Desarrollo Web, Arquitectura de Software, Innovación Digital"
           },
-          "orion": {
-            "role": "El Emperador",
-            "title": "Estrategia y Operaciones",
-            "bio": "Orion construye los cimientos sobre los cuales se realizan nuestros rituales. Su dominio de la estructura y el proceso asegura que nuestra energía creativa esté enfocada y sea efectiva.",
-            "keywords": "Operaciones, Planificación Estratégica, Gestión de Proyectos, Análisis de Datos"
+          "maximo": {
+            "role": "CEO & Productor",
+            "title": "Publicista y Productor",
+            "bio": "Como corazón y fuerza motriz de Mysterik, Máximo lidera la producción y la estrategia publicitaria, orquestando equipos para forjar legados de marca con impacto real.",
+            "keywords": "Producción Audiovisual, Estrategia Publicitaria, Liderazgo"
           },
-          "lyra": {
-            "role": "La Estrella",
-            "title": "Diseñadora Principal",
-            "bio": "Lyra ilumina nuestros proyectos con un diseño impresionante. Su trabajo es una constelación de belleza y función, guiando a los usuarios a través de experiencias digitales inolvidables.",
-            "keywords": "Diseño UI/UX, Diseño Gráfico, Ilustración, Gráficos en Movimiento"
+          "laureano": {
+            "role": "Filmmaker",
+            "title": "Filmmaker y Editor",
+            "bio": "La lente de Laureano captura la esencia de cada historia. Su talento para la cinematografía y la precisión en la edición dan vida a narrativas visuales que cautivan.",
+            "keywords": "Cinematografía, Edición de Video, Narrativa Visual"
+          },
+          "magali": {
+            "role": "Diseñadora Local",
+            "title": "Diseñadora en Mendoza",
+            "bio": "Arraigada en Mendoza, Magalí destila la energía y cultura local en diseños impactantes, asegurando que cada proyecto resuene con autenticidad y belleza.",
+            "keywords": "Diseño UX/UI, Identidad Visual, Creatividad Local"
           }
         }
       },
@@ -272,29 +278,35 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         "prevAria": "Previous team member",
         "nextAria": "Next team member",
         "members": {
-          "elara": {
-            "role": "The High Priestess",
-            "title": "CEO & Visionary",
-            "bio": "Elara channels the creative vision of Mysterik, guiding the coven with intuition and strategic insight. Her connection to market undercurrents is the source of our power.",
-            "keywords": "Brand Alchemy, Strategic Vision, Market Intuition, Leadership"
+          "sofia": {
+            "role": "Designer",
+            "title": "Designer (Based in Spain)",
+            "bio": "Based in Spain, Sofía brings a global perspective and refined aesthetic to every project, bridging continents through visual design.",
+            "keywords": "Graphic Design, Art Direction, International Design"
           },
-          "jax": {
-            "role": "The Magician",
-            "title": "Creative Director",
-            "bio": "Jax manifests ideas into reality. A master of visual and narrative arts, he wields the tools of creation to cast potent spells of engagement and desire.",
-            "keywords": "Film Direction, Visual Storytelling, Creative Concepting, UX Magic"
+          "augusto": {
+            "role": "Developer",
+            "title": "Software Developer",
+            "bio": "Augusto transforms creative visions into robust digital realities. His mastery of code ensures every Mysterik experience is fast, scalable, and immersive.",
+            "keywords": "Web Development, Software Architecture, Digital Innovation"
           },
-          "orion": {
-            "role": "The Emperor",
-            "title": "Strategy & Operations",
-            "bio": "Orion builds the foundations upon which our rituals are performed. His mastery of structure and process ensures that our creative energy is focused and effective.",
-            "keywords": "Operations, Strategic Planning, Project Management, Data Analysis"
+          "maximo": {
+            "role": "CEO & Producer",
+            "title": "Publicist and Producer",
+            "bio": "As the heart and driving force of Mysterik, Máximo leads production and advertising strategy, orchestrating teams to forge brand legacies with real impact.",
+            "keywords": "Audiovisual Production, Advertising Strategy, Leadership"
           },
-          "lyra": {
-            "role": "The Star",
-            "title": "Lead Designer",
-            "bio": "Lyra illuminates our projects with breathtaking design. Her work is a constellation of beauty and function, guiding users through unforgettable digital experiences.",
-            "keywords": "UI/UX Design, Graphic Design, Illustration, Motion Graphics"
+          "laureano": {
+            "role": "Filmmaker",
+            "title": "Filmmaker and Editor",
+            "bio": "Laureano's lens captures the essence of every story. His talent for cinematography and precision in editing bring visual narratives to life that captivate audiences.",
+            "keywords": "Cinematography, Video Editing, Visual Narrative"
+          },
+          "magali": {
+            "role": "Local Designer",
+            "title": "Designer in Mendoza",
+            "bio": "Rooted in Mendoza, Magalí distills local energy and culture into striking designs, ensuring each project resonates with authenticity and beauty.",
+            "keywords": "UX/UI Design, Visual Identity, Local Creativity"
           }
         }
       },
@@ -447,29 +459,35 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         "prevAria": "Membro anterior da equipe",
         "nextAria": "Próximo membro da equipe",
         "members": {
-          "elara": {
-            "role": "A Alta Sacerdotisa",
-            "title": "CEO e Visionária",
-            "bio": "Elara canaliza a visão criativa da Mysterik, guiando o clã com intuição e percepção estratégica. Sua conexão com as correntes do mercado é a fonte do nosso poder.",
-            "keywords": "Alquimia de Marca, Visão Estratégica, Intuição de Mercado, Liderança"
+          "sofia": {
+            "role": "Designer",
+            "title": "Designer (Sediada em Espanha)",
+            "bio": "Sediada na Espanha, Sofía traz uma perspectiva global e estética refinada a cada projeto, construindo pontes entre continentes através do design visual.",
+            "keywords": "Design Gráfico, Direção de Arte, Design Internacional"
           },
-          "jax": {
-            "role": "O Mago",
-            "title": "Diretor Criativo",
-            "bio": "Jax manifesta ideias em realidade. Um mestre das artes visuais e narrativas, ele utiliza as ferramentas da criação para lançar feitiços potentes de engajamento e desejo.",
-            "keywords": "Direção de Cinema, Narrativa Visual, Concepção Criativa, Magia UX"
+          "augusto": {
+            "role": "Desenvolvedor",
+            "title": "Desenvolvedor de Software",
+            "bio": "Augusto transforma visões criativas em realidades digitais robustas. Seu domínio do código garante que cada experiência seja rápida, escalável e imersiva.",
+            "keywords": "Desenvolvimento Web, Arquitetura de Software, Inovação Digital"
           },
-          "orion": {
-            "role": "O Imperador",
-            "title": "Estratégia e Operações",
-            "bio": "Orion constrói as fundações sobre as quais nossos rituais são realizados. Seu domínio da estrutura e do processo garante que nossa energia criativa seja focada e eficaz.",
-            "keywords": "Operações, Planejamento Estratégico, Gerenciamento de Projetos, Análise de Dados"
+          "maximo": {
+            "role": "CEO e Produtor",
+            "title": "Publicitário e Produtor",
+            "bio": "Como coração e força motriz da Mysterik, Máximo lidera a produção e a estratégia publicitária, orquestrando equipes para forjar legados de marca com impacto real.",
+            "keywords": "Produção Audiovisual, Estratégia Publicitária, Liderança"
           },
-          "lyra": {
-            "role": "A Estrela",
-            "title": "Designer Principal",
-            "bio": "Lyra ilumina nossos projetos com um design deslumbrante. Seu trabalho é uma constelação de beleza e função, guiando os usuários por experiências digitais inesquecíveis.",
-            "keywords": "Design UI/UX, Design Gráfico, Ilustração, Motion Graphics"
+          "laureano": {
+            "role": "Filmmaker",
+            "title": "Cineasta e Editor",
+            "bio": "A lente de Laureano captura a essência de cada história. Seu talento para a cinematografia e a precisão na edição dão vida a narrativas visuais que cativam.",
+            "keywords": "Cinematografia, Edição de Vídeo, Narrativa Visual"
+          },
+          "magali": {
+            "role": "Designer Local",
+            "title": "Designer em Mendoza",
+            "bio": "Enraizada em Mendoza, Magalí destila a energia e cultura local em designs impactantes, garantindo que cada projeto ressoe com autenticidade e beleza.",
+            "keywords": "Design UX/UI, Identidade Visual, Criatividade Local"
           }
         }
       },
